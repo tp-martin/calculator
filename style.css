@@ -14,11 +14,11 @@
 
 #calcScreen {
   font-family: 'Courier New', monospace;
-  border: solid, grey;
+  border: solid, 3px, rgb(66, 65, 65);
   background: grey;
   align-items: center;
   justify-content: center;
-  margin: 1em 2em;
+  margin: 1em 1em;
   font-size: 1.5em;
   text-align: right;
 }
@@ -27,6 +27,11 @@
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+#logo {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 #model {
@@ -63,3 +68,4 @@
   background: red;
   color: white
 }
+
