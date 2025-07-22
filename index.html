@@ -8,9 +8,7 @@
 </head>
 <body>
     <div id='calculatorBody'>
-  <div id='calcScreen'>
-    123456789
-  </div>
+  <input id= 'calcScreen' readonly>
   <div class='labels'>
     <p id ='logo' class ='labels' >🐓Tyler Instruments</p> 
     <p id='model' class = 'labels' >TI-808</p>
@@ -23,29 +21,29 @@
   </div>
   <div class ='buttons'>
   <div id ='leftButtons'>
-    <button id ='signChange' class = 'function'> -/+</button>
-    <button id ='sqaureRoot' class = 'function'> √ </button>
-    <button id ='percent' class = 'function'> %</button>
-    <button id ='seven' class = 'number'> 7 </button>
-    <button id ='eight' class = 'number'> 8 </button>
-    <button id ='nine' class = 'number'> 9 </button>
-    <button id ='four' class = 'number'> 4 </button>
-    <button id ='five' class = 'number'> 5 </button>
-    <button id ='six' class = 'number'> 6 </button>
-    <button id ='one' class = 'number'> 1 </button>
-    <button id ='two' class = 'number'> 2 </button>
-    <button id ='three' class = 'number'> 3 </button>
-    <button id ='onClear' class = 'function'> ON/C </button>
-    <button id ='zero' class = 'number'> 0 </button>
-    <button id ='decimal' class = 'number'> . </button>
+    <button onclick="appendToDisplay('-')" id ='signChange' class = 'function'> -/+</button>
+    <button onclick="appendToDisplay('√')" id ='sqaureRoot' class = 'function'> √ </button>
+    <button onclick="appendToDisplay('')" id ='percent' class = 'function'> %</button>
+    <button onclick="appendToDisplay('7')" id ='seven' class = 'number'> 7 </button>
+    <button onclick="appendToDisplay('8')" id ='eight' class = 'number'> 8 </button>
+    <button onclick="appendToDisplay('9')" id ='nine' class = 'number'> 9 </button>
+    <button onclick="appendToDisplay('4')" id ='four' class = 'number'> 4 </button>
+    <button onclick="appendToDisplay('5')" id ='five' class = 'number'> 5 </button>
+    <button onclick="appendToDisplay('6')" id ='six' class = 'number'> 6 </button>
+    <button onclick="appendToDisplay('1')" id ='one' class = 'number'> 1 </button>
+    <button onclick="appendToDisplay('2')" id ='two' class = 'number'> 2 </button>
+    <button onclick="appendToDisplay('3')" id ='three' class = 'number'> 3 </button>
+    <button onclick="clearDisplay()" id ='onClear' class = 'function'> ON/C </button>
+    <button onclick="appendToDisplay('0')" id ='zero' class = 'number'> 0 </button>
+    <button onclick="appendToDisplay('.')" id ='decimal' class = 'number'> . </button>
   </div>
   
 <div id ='rightButtons'>
-    <button id ='divide' class = 'function'> ÷ </button>
-    <button id ='multiply' class = 'function'> x </button>
-    <button id ='subtract' class = 'function'> - </button>
-    <button id ='add' class = 'function'> + </button>
-    <button id ='equals' class = 'function'> = </button>
+    <button onclick="appendToDisplay('/')" id ='divide' class = 'function'> ÷ </button>
+    <button onclick="appendToDisplay('x')" id ='multiply' class = 'function'> x </button>
+    <button onclick="appendToDisplay('-')" id ='subtract' class = 'function'> - </button>
+    <button onclick="appendToDisplay('+')" id ='add' class = 'function'> + </button>
+    <button onclick="calculate()" id ='equals' class = 'function'> = </button>
 </div>
 </div>
 </div>
