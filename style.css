@@ -1,11 +1,11 @@
 #calculatorBody {
-  border: solid, #110088;
-  background: #110088;
+  border: solid, #2913ba;
+  background: #371af2;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   height: 500px;
-  width: 300px;
+  width: 310px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 25px;
@@ -15,11 +15,12 @@
 #calcScreen {
   font-family: 'Courier New', monospace;
   border: solid, 3px, rgb(66, 65, 65);
+  height: 40px;
   background: grey;
   align-items: center;
   justify-content: center;
-  margin: 1em 1em;
-  font-size: 1.5em;
+  margin: 0.5em 1em;
+  font-size: 2.5em;
   text-align: right;
 }
 
@@ -61,11 +62,13 @@
 }
 
 .buttons {
-  border: solid;
+  border: 2px, solid, #2913ba;
+  display: flex;
+  margin: 0.5em;
+  border-radius: 15px;
 }
 
 #leftButtons {
-  border: solid;
   width: 200px;
   height: 300px;
   display: flex;
@@ -86,5 +89,15 @@
 .function {
   background: red;
   color: white
+}
+
+#rightButtons {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    width: 80px;
+
 }
 
