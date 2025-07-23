@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(146, 111, 111);
+}
+
 #calculatorBody {
   border: solid, #2913ba;
   background: #371af2;
@@ -12,7 +16,7 @@
   border-bottom-right-radius: 25px
 }
 
-#calcScreen {
+.calcScreen {
   font-family: 'Courier New', monospace;
   border: solid, 3px, rgb(66, 65, 65);
   height: 40px;
