@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id='calculatorBody'>
-  <div class='calcScreen'></div>
+  <input type="text" id="display" class="display" disabled>
   <div class='labels'>
     <p id ='logo' class ='labels' >🐓Tyler Instruments</p> 
     <p id='model' class = 'labels' >TI-808</p>
@@ -21,29 +21,29 @@
   </div>
   <div class ='buttons'>
   <div id ='leftButtons'>
-    <button id ='signChange' class = 'function'>-/+</button>
-    <button id ='sqaureRoot' class = 'function'>√</button>
-    <button id ='percent' class = 'function'>%</button>
-    <button id ='seven' class = 'number'>7</button>
-    <button id ='eight' class = 'number'>8</button>
-    <button id ='nine' class = 'number'>9</button>
-    <button id ='four' class = 'number'>4</button>
-    <button id ='five' class = 'number'>5</button>
-    <button id ='six' class = 'number'>6</button>
-    <button id ='one' class = 'number'>1</button>
-    <button id ='two' class = 'number'>2</button>
-    <button id ='three' class = 'number'>3</button>
-    <button id ='onClear' class = 'function'>ON/C</button>
-    <button id ='zero' class = 'number'>0</button>
-    <button id ='decimal' class = 'number'>.</button>
+    <button class="buttonOperator" onclick="signChange()">-/+</button>
+    <button class="buttonOperator" onclick="squareRoot()">√</button>
+    <button class="buttonOperator" onclick="percent()">%</button>
+    <button class="button" onclick="appendNumber('7')">7</button>
+    <button class="button" onclick="appendNumber('8')">8</button>
+    <button class="button" onclick="appendNumber('9')">9</button>
+    <button class="button" onclick="appendNumber('4')">4</button>
+    <button class="button" onclick="appendNumber('5')">5</button>
+    <button class="button" onclick="appendNumber('6')">6</button>
+    <button class="button" onclick="appendNumber('1')">1</button>
+    <button class="button" onclick="appendNumber('2')">2</button>
+    <button class="button" onclick="appendNumber('3')">3</button>
+    <button class="buttonClear" onclick="clearDisplay()">ON/C</button>
+    <button class="button" onclick="appendNumber('0')">0</button>
+    <button class="button" onclick="appendNumber('.')">.</button>
   </div>
   
 <div id ='rightButtons'>
-    <button id ='divide' class = 'function'>/</button>
-    <button id ='multiply' class = 'function'>*</button>
-    <button id ='subtract' class = 'function'>-</button>
-    <button id ='add' class = 'function'>+</button>
-    <button id ='equals' class = 'function'>=</button>
+    <button class="buttonOperator" onclick="appendOperation('/')">÷</button>
+    <button class="buttonOperator" onclick="appendOperation('*')">x</button>
+    <button class="buttonOperator" onclick="appendOperation('-')">-</button>
+    <button class="buttonOperator" onclick="appendOperation('+')">+</button>
+    <button class="buttonEqual" onclick="calculate()">=</button>
 </div>
 </div>
 </div>

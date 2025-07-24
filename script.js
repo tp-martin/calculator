@@ -1,23 +1,62 @@
-const calcScreen = document.querySelector('.calcScreen');
-const buttons = document.querySelectorAll('button');
-console.log(buttons)
+let currentInput = '';
+let currentOperation = '';
+let previousInput = '';
 
-let calculation = []
-let accumulativeCalculation
-
-function calculate(button) {
-    const value = button.textContent
-    if (value === "ON/C") {
-        calculation = []
-        calcScreen.textContent = '.'
-    } else if (value === "=") {
-        calcScreen.textContent = eval(accumulativeCalculation)
-    } else {
-        calculation.push(value)
-        accumulativeCalculation = calculation.join('')
-        calcScreen.textContent = accumulativeCalculation
-    }
-    
+function appendNumber(number) {
+    currentInput += number;
+    document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
 }
 
-buttons.forEach(button => button.addEventListener('click', () => calculate(button)))
+function appendOperation(operation) {
+    if (currentInput === '') return;
+    if (previousInput !== '') {
+        calculate(); 
+    }
+    currentOperation = operation;
+    previousInput = currentInput;
+    currentInput = '';
+    document.getElementById('display').value = `${previousInput} ${currentOperation}`;
+}
+
+function calculate() {
+    if (previousInput === '' || currentInput === '') return;
+    let result;
+    let prev = parseFloat(previousInput);
+    let current = parseFloat(currentInput);
+
+    switch (currentOperation) {
+        case '+':
+            result = prev + current;
+            break;
+        case '-':
+            result = prev - current;
+            break;
+        case '*':
+            result = prev * current;
+            break;
+        case '/':
+            if (current === 0) {
+                alert("Cannot divide by zero");
+                return;
+            }
+            result = prev / current;
+            break;
+        default:
+            return;
+    }
+
+    currentInput = result.toString();
+    currentOperation = '';
+    previousInput = '';
+    document.getElementById('display').value = currentInput;
+}
+
+function clearDisplay() {
+    currentInput = '';
+    previousInput = '';
+    currentOperation = '';
+    document.getElementById('display').value = '';
+}
+
+function signChange() {
+    currentInput
