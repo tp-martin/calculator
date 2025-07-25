@@ -1,52 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id='calculatorBody'>
-  <input type="text" id="display" class="display" disabled>
-  <div class='labels'>
-    <p id ='logo' class ='labels' >🐓Tyler Instruments</p> 
-    <p id='model' class = 'labels' >TI-808</p>
-  </div>
-  <div id="solarPanel">
-    <div class="panels"></div>
-    <div class="panels"></div>
-    <div class="panels"></div>
-    <div class="panels"></div>
-  </div>
-  <div class ='buttons'>
-  <div id ='leftButtons'>
-    <button class="buttonOperator" onclick="signChange()">-/+</button>
-    <button class="buttonOperator" onclick="squareRoot()">√</button>
-    <button class="buttonOperator" onclick="percent()">%</button>
-    <button class="button" onclick="appendNumber('7')">7</button>
-    <button class="button" onclick="appendNumber('8')">8</button>
-    <button class="button" onclick="appendNumber('9')">9</button>
-    <button class="button" onclick="appendNumber('4')">4</button>
-    <button class="button" onclick="appendNumber('5')">5</button>
-    <button class="button" onclick="appendNumber('6')">6</button>
-    <button class="button" onclick="appendNumber('1')">1</button>
-    <button class="button" onclick="appendNumber('2')">2</button>
-    <button class="button" onclick="appendNumber('3')">3</button>
-    <button class="buttonClear" onclick="clearDisplay()">ON/C</button>
-    <button class="button" onclick="appendNumber('0')">0</button>
-    <button class="button" onclick="appendNumber('.')">.</button>
-  </div>
-  
-<div id ='rightButtons'>
-    <button class="buttonOperator" onclick="appendOperation('/')">÷</button>
-    <button class="buttonOperator" onclick="appendOperation('*')">x</button>
-    <button class="buttonOperator" onclick="appendOperation('-')">-</button>
-    <button class="buttonOperator" onclick="appendOperation('+')">+</button>
-    <button class="buttonEqual" onclick="calculate()">=</button>
-</div>
-</div>
-</div>
-<script src="script.js"></script>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="calculator">
+            <input type=text id="display" readonly>
+                <div class= 'labels'>
+                    <p id = 'logo' class ='labels' >🐓Tyler Instruments</p> 
+                    <p id= 'model' class = 'labels' >TI-808</p>
+                </div>
+            <div id="buttons"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
