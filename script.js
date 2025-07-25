@@ -34,10 +34,12 @@ for (let i = 0; i < buttonValues.length; i++) {
     else if (rightSymbols.includes(value)) {
         button.style.backgroundColor = "#e31313ff";
         button.style.color = "#ffffff";
+        button.style.fontFamily = "Courier New', Courier, monospace";
     }
     else if (topSymbols.includes(value)) {        
         button.style.backgroundColor = "#e31313ff";
         button.style.color = "#ffffffff";
+        button.style.fontFamily = "Courier New', Courier, monospace";
     }
 
     //process button clicks
